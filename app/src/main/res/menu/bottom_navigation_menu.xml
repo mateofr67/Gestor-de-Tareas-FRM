@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tareaListFragment"
+        android:layout_width="wrap_content"
+        android:enabled="true"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_checklist_24"
+        android:title="@string/tareas_menu"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/categoriaListFragment"
+        android:enabled="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_category_24"
+        android:title="@string/prioridades"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/tareasCompletadasFragment"
+        android:enabled="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_check_box_24"
+        android:title="@string/completadas"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tareasPorCompletarFragment"
+        android:enabled="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_check_box_outline_blank_24"
+        android:title="@string/a_completar"
+        app:showAsAction="ifRoom" />
+</menu>

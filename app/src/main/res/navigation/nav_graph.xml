@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tareaListFragment">
+
+    <fragment
+        android:id="@+id/addTareaFragment"
+        android:name="com.example.proyecto.views.AddTareaFragment"
+        android:label="Añadido de Tareas"
+        tools:layout="@layout/fragment_add_tarea" />
+    <fragment
+        android:id="@+id/tareaListFragment"
+        android:name="com.example.proyecto.views.TareaListFragment"
+        android:label="Todas las Tareas"
+        tools:layout="@layout/fragment_tarea_list">
+        <action
+            android:id="@+id/action_tareaListFragment_to_categoriaListFragment"
+            app:destination="@id/categoriaListFragment" />
+        <action
+            android:id="@+id/action_tareaListFragment_to_addTareaFragment"
+            app:destination="@id/addTareaFragment" />
+        <action
+            android:id="@+id/action_tareaListFragment_to_tareasCompletadasFragment"
+            app:destination="@id/tareasCompletadasFragment" />
+        <action
+            android:id="@+id/action_tareaListFragment_to_tareasPorCompletarFragment"
+            app:destination="@id/tareasPorCompletarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriaListFragment"
+        android:name="com.example.proyecto.views.PrioridadListFragment"
+        android:label="Prioridades de Tarea"
+        tools:layout="@layout/fragment_prioridad_list" />
+    <fragment
+        android:id="@+id/tareasCompletadasFragment"
+        android:name="com.example.proyecto.views.TareasCompletadasFragment"
+        android:label="Tareas sin completar" />
+    <fragment
+        android:id="@+id/tareasPorCompletarFragment"
+        android:name="com.example.proyecto.views.TareasPorCompletarFragment"
+        android:label="Tareas por Completar" />
+</navigation>
