@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proyecto</string>
+    <string name="app_name">Gestor de Tareas FRM</string>
     <string name="tareas">Tareas</string>
     <string name="confirmacion_borrado_aceptar">Aceptar</string>
     <string name="tareas_borrado_exito_mensaje">Registro de Tareas borrado con éxito</string>

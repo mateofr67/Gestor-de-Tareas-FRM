@@ -46,6 +46,8 @@ abstract class TareaDatabase: RoomDatabase() {
                             }
                         }
                     })
+                    .setJournalMode(JournalMode.TRUNCATE)
+                    .createFromAsset("database/tareas_database5.db")
                     .build()
                 INSTANCE = instance
                 instance
