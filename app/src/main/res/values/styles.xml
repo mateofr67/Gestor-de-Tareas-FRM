@@ -8,10 +8,11 @@
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
-<style name="SplashTheme" parent="@style/Theme.Proyecto">
-    <item name="android:windowBackground">
-        @drawable/splash
-    </item>
-</style>
+
+    <style name="SplashTheme" parent="@style/Theme.Proyecto">
+        <item name="android:windowBackground">
+            @drawable/splash
+        </item>
+    </style>
 
 </resources>
