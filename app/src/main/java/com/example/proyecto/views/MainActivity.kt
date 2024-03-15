@@ -2,8 +2,8 @@ package com.example.proyecto.views
 
 
 import android.graphics.Color
+import android.media.MediaPlayer
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
@@ -25,6 +25,7 @@ import com.example.proyecto.views.viewmodel.UserPreferences
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
+    private lateinit var mediaPlayer: MediaPlayer
 
     private var modoNocturno: Boolean = false
     private var menu2: Menu? = null
@@ -34,6 +35,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        mediaPlayer = MediaPlayer.create(this, R.raw.inicio);
+
+        mediaPlayer.start();
+
+        setTheme(R.style.Theme_Proyecto)
+        Thread.sleep(2000)
+
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -83,7 +91,10 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+
+
+
+override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
         val itemNightMode = menu?.findItem(R.id.modoNocturnoItem)
 
         if (modoNocturno) {

@@ -15,20 +15,13 @@
         android:theme="@style/Theme.Proyecto"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreenActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="true"
-            android:label="Gestor de Tareas FRM"
-            android:theme="@style/Theme.Proyecto.Fullscreen">
+            android:name=".views.MainActivity"
+            android:exported="true" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".views.MainActivity"
-            android:exported="true">
 
         </activity>
     </application>
