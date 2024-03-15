@@ -2,6 +2,7 @@ package com.example.proyecto
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.res.Configuration
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
@@ -27,6 +28,11 @@ class SplashScreenActivity : AppCompatActivity() {
                 startActivity(Intent(this, MainActivity::class.java))
             }, 3000)
         }, 1000)
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        // Realiza ajustes en el diseño según la nueva configuración de orientación
     }
 
     override fun onPause() {

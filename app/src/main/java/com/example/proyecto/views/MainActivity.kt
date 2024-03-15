@@ -2,7 +2,6 @@ package com.example.proyecto.views
 
 
 import android.graphics.Color
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -111,12 +110,12 @@ override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.modoNocturnoItem) {
+        return if (item.itemId == R.id.modoNocturnoItem) {
             viewModel.cambiarModoNocturno()
-            return true
+            true
         } else {
             val navController = findNavController(R.id.navHostFragment)
-            return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+            item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
         }
     }
 
